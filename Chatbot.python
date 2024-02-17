@@ -1,0 +1,30 @@
+responses = {
+    "hi": "Hello!",
+    "how are you?": "I'm doing well, thank you!",
+    "what's your name?": "I'm a chatbot!",
+    "who created you?": "I was created by  Pradnya.",
+    "tell me a joke": "Why don't scientists trust atoms? Because they make up everything!",
+    "do you like pizza?": "I don't eat, but I've heard pizza is quite popular!",
+    "what is the meaning of life?": "That's a tough one! The meaning of life is subjective.",
+    "bye": "Goodbye! Have a great day!",
+    "who are you?": "I'm an AI chatbot here to assist you!",
+    "favorite color?": "I don't have a favorite color, but I like all colors equally.",
+    "default": "I'm still learning. Please ask something else."
+}
+
+# Chat function
+def chat():
+    print("Bot: Hello! Let's chat. You can type 'bye' to exit.")
+    while True:
+        user_input = input("You: ").lower()
+
+        if user_input == 'bye':
+            print("Bot:", responses["bye"])
+            break
+
+        response = responses.get(user_input, responses["default"])
+        print("Bot:", response)
+
+# Start the conversation
+chat()
+
